@@ -29,6 +29,11 @@ class PelayanController extends Controller
         return view('admin.pelayan.create');
     }
 
+    public function edit(Pelayan $pelayan)
+    {
+        return view('admin.pelayan.edit', compact('pelayan'));
+    }
+
    public function store(Request $request)
 {
     $request->validate([
