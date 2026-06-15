@@ -1,0 +1,13 @@
+.git
+.env
+node_modules
+vendor
+public/build
+storage/*.key
+storage/logs/*.log
+storage/framework/views/*.php
+storage/framework/cache/data/*
+bootstrap/cache/*.php
+.phpunit.result.cache
+Dockerfile
+.dockerignore
