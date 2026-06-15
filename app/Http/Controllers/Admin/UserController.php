@@ -76,7 +76,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('admin.users.show', compact('user'));
+        return redirect()->route('admin.user.index');
     }
 
     /**
@@ -121,7 +121,7 @@ class UserController extends Controller
 
         $user->update($validated);
 
-        return redirect()->route('admin.users.index')
+        return redirect()->route('admin.user.index')
                          ->with('success', "User {$user->username} berhasil diperbarui.");
     }
 
