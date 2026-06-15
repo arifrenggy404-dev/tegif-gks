@@ -96,12 +96,12 @@ class UserController extends Controller
         $validated = $request->validate([
             'username' => [
                 'required', 'string', 'max:50',
-                Rule::unique('user', 'username')->ignore($user->id_user, 'id_user'),
+                Rule::unique('users', 'username')->ignore($user->id_user, 'id_user'),
             ],
             'nama'     => 'required|string|max:100',
             'email'    => [
                 'required', 'email', 'max:100',
-                Rule::unique('user', 'email')->ignore($user->id_user, 'id_user'),
+                Rule::unique('users', 'email')->ignore($user->id_user, 'id_user'),
             ],
             'password' => 'nullable|string|min:8|confirmed',
             'role'     => 'required|in:admin,pengurus,bendahara',
